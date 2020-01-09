@@ -1,14 +1,16 @@
 <template>
   <div id="app">
+    <etap1/>
   </div>
 </template>
 
 <script>
+import etap1 from "@/components/etap_1.vue"
 
 export default {
   name: 'app',
   components: {
-    
+    etap1
   }
 }
 </script>
