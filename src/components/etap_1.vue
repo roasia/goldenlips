@@ -1,13 +1,24 @@
 <template>
     
-    <div id="form">
-        <h1>Wyślij swoją propozycję tematu</h1>
-        <p>Zbieramy propozycje tematów na najbliższą edycję konkursu. Jeśli chcesz, możesz dodać swoją propozycję poniżej:</p>
-        <form action="julia.warakomska1a@gmail.com" method="post">
-            <input type="text" name="wpisz_temat">Wpisz swoją propozycję...
-            <input type="submit" value="Wyślij">
-        </form>
-    </div>
+    <div id="container">
+        <div id="title">
+            Wyślij swoją propozycję tematu
+        </div>
+        <div id="text">
+            Zbieramy propozycje tematów na najbliższą edycję konkursu. Jeśli chcesz, możesz dodać swoją propozycję poniżej:
+        </div>
+        <div id="form">
+            <form>
+            <div id="subject">
+                <input type="text" name="subject" placeholder="Wpisz swoją propozycję...">
+            </div>
+            <br>
+            <div id="send">
+                <input type="submit" value="Wyślij">
+            </div>
+            </form>
+        </div>
+    </div>     
 </template>
 
 <script>
@@ -19,43 +30,68 @@ export default {
 <style lang="scss" scoped>
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-    #etap_1{
+    #container{
         width: 100vw;
         display: flex;
+        justify-content: flex-start;
         flex-direction: column;
         font-family: "Lato";
-        text-align:center;
         text-transform:uppercase;
-        }
 
-    h1 {
+    #title{
+        width: 100%;
+        height: 8rem;
         font-size: 4em;
         color:#f4c621;
+        display:flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    p {
-        font-family: "Lato";
-        text-align:center;
+    #text{
         color:#aeaeae;
         font-size:2.5em;
     }
 
-    form {
-        font-family: "Lato";
-        text-align:center;
+    #form{
         color:#aeaeae;
-    }
-    #wpis {
-        color:#f4c621;
-        font-size:2em;
-        outline:none;
-        width:25em;
-        height:2.1em;
-        border:none;
-    }
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
 
-    input {
-        font-family: "Lato";
-        text-align:center;
+            #subject{
+                width: 50rem;
+                height: 7rem;
+                border-radius: 10px;
+                background-color: #f4c621;
+
+                    input{
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                        outline: none;
+                        width:100%;
+                        height: 100%;
+                        background:none;
+                    }
+            #send{
+                width: 21rem;
+                height: 7rem;
+                border-radius: 10px;
+                background-color: #f4c621;
+                color:black;
+
+                    input{
+                        margin: 0;
+                        padding: 0;
+                        border: none;
+                        outline: none;
+                        width:100%;
+                        height: 100%;
+                        background:none;
+                        }
+                }
+            }
+        }
     }
 </style>
