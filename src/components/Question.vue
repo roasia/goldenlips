@@ -1,8 +1,7 @@
 <template>
-  <div class="question">
-
-    <h2 class="question__title">{{ title }}</h2>
-    <p class="question__text"> {{ text }}</p>
+  <div class="question"> 
+    <p class="question_title">{{ title }}</p>
+    <p class="question_text"> {{ text }}</p>
   </div>
 </template>
 
@@ -17,24 +16,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.question {
-  text-align: center;
-  margin-bottom: 3em;
-  &:last-child {
-    margin-bottom: 0;
+  p{
+    margin: 0;
+    padding: 0;
   }
-
-  &__title{
-    margin-top: 0;
-    color:gold;
+  .question_title{
     text-transform: uppercase;
-
+    color: #F4C621;
+    font-size: 2rem;
+    padding-top: 9vh;
+    font-weight: 900;
   }
-
-  &__text{
-    margin-bottom: 0;
-    color:white;
-    text-transform: uppercase;
+  .question_text{
+     text-transform: uppercase;
+     font-size: 1.15rem;
+     padding-top: 1.5vh;
+     line-height: 1.6rem;
   }
-}
 </style>

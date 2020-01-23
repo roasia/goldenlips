@@ -1,98 +1,124 @@
 <template>
+  <div class="container">
+    <div class="banner" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
+      <div class="top">
+        <div class="title">
+          Złote usta
+        </div>
+        <div class="description">
+          Konkurs krasomówczy na Wiśniowej
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Biblioteka szkolna zachęca do wzięcia udziału w igrzyskach na mikrofony,</p> 
+        <p>gdzie zwycięzca może być tylko jeden! </p>
+      </div>
+    </div>
 
-  <div class="menu">
-    <link rel="shortcut icon" type="image/png" href="elo.png">
-  <div class="image" :style="{ backgroundImage: 'url(' + background + ')' }">   
-<div id="top">
-<h1 id="h1" style="font-size:65px"> ZŁOTE USTA </h1> 
-<h2 id="h2" style ="font-size:35px">KONKURS RECYTATORSKI NA WIŚNIOWEJ</h2> <br>
-</div>
-<div id="bottom">
-<p style ="font-size:25px">BIBLIOTEKA SZKOLNA ZACHĘCA DO WZIĘCIA UDZIAŁU W IGRZYSKACH NA </p><br>
-<p style ="font-size:25px">MIKROFONY, GDZIE ZWYCIĘZCA MOŻE BYĆ TYLKO JEDEN</p>
-</div>
+    <div class="info">
+      <div class="box">
+        <question title="Gdzie i kiedy?" text="konkurs odbędzie się w czytelni koło biblioteki; termin konkursu zostanie podany póżniej"/>
+        <question title="Kto organizuje?" text="organizatorami konkursu są: Sylwia Błażejewska oraz Beata Walczak"/>  
+        <question title="Kto może wziąć udział?" text="W konkursie mogą wziać udział wszyscy uczniowie z naszej szkoły"/>  
+        <question title="Czy będą jakieś nagrody?" text="zobaczymy"/>  
+        <question title="Gdzie szukać więcej informacji?" text="Na tej stronie będą zamieszczane wszelkie niezbędne informacje dla zainteresowanych. Jeśli jednak wolisz bardziej werbalne środki przekazu, to panie z biblioteki mogą udzielić takich informacji"/>  
+
+
+      </div>
+    </div>
+
   </div>
-<section class="questions-wrapper">
-  <Question title="Gdzie i kiedy?" text="Konkurs odbędzie się w czytelni koło biblioteki
-  w terminie podanym później." />
-  <Question title="Kto organizuje?" text="Organizatorami konkursu są: Sylwia Błażejewska i Beata Walczak."/>
-  <Question title="Kto może wziąć udział?" text="Konkurs jest ogólnoszkolny i każdy zainteresowany może w nim wystartować."/>
-  <Question title="A będą jakieś nagrody?" text="Raczej nie."/>
-  <Question title="Gdzie szukać więcej informacji?" text="Tu na stronie będą zamieszczane wszelkie niezbędne informacje dla zainteresowanych."/>
-</section>
-
-  </div>
-
-  
 </template>
 
 <script>
-import background from '@/assets/1.jpg';
-import Question from '@/components/Question.vue'
-
+import image from '@/assets/1.jpg';
+import question from '@/components/Question';
 
 export default {
-  name: "Start",
+  name: 'Start',
   components: {
-    Question
+    question
   },
   data() {
     return {
-      background : background
+      image: image
     }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-html, body 
-{
+  .container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    color: rgba(255,255,255,0.5);
 
-font-family: 'Lato', sans-serif;
-}
-#top
-{
-height: 40rem;
-}
-#bottom {
-float: left;
-}
+    .banner{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-.image {
-  background-image: url({{background}});
-  height: 50rem;
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-}
+      .top{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
 
-.questions-wrapper
-{
-  text-align: center;
-  width: 100%;
-  background-color: #36000C;
-  padding: 3em;
-  overflow: hidden;
-}
+        .title{
+          font-size: 5.5rem;
+          color: #F4C621;
+          text-transform: uppercase;
+          padding-top: 5rem;
+          font-weight: 900;
+        }
+        .description{
+          font-size: 2rem;
+          color: white;
+          text-transform: uppercase;
+          padding-top: 1.5rem;
+        }
+      }
+      .bottom{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: uppercase;
+        padding-bottom: 4rem;
 
-.image,#h1 {
-text-align: center;
-color: gold;
+        p{
+          margin: 0;
+          padding: 0.2rem;
+        }
+      }
+    }
+    .info{
+      background-color: #36000C;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
 
-}
-.image,#h2 {
-text-align: center;
-color:white;
-
-}
-
-
-
+      .box{
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 9vh;
+      }
+    }
+  }
 
 </style>
