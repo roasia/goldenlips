@@ -11,7 +11,7 @@
         <div id="form">
             <form>
             <div id="subject">
-                <input type="text" name="subject" placeholder="Wpisz swoją propozycję...">
+                <input type="text" placeholder="Wpisz swoją propozycję...">
             </div>
             <br>
             <div id="send">
@@ -32,9 +32,8 @@ export default {
 <style lang="scss" scoped>
 
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-    #container{
+    #container {
         width: 100vw;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,75 +41,72 @@ export default {
         text-transform:uppercase;
         background-color: #1e000e;
 
-        #box{
+        #box {
             width:  50vw;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
 
-
-        #title{
-            height: 10vh;
-            font-size: 3em;
-            color:#f4c621;
+        #title {
+            height: 5rem;
+            font-size: 2rem;
+            color:rgb(235, 181, 33);
             display:flex;
             justify-content: flex-start;
             align-items: center;
             font-weight: 900;
         }
 
-        #text{
-            color:#aeaeae;
-            height: 20vh;
-            font-size:2em;
-            display:flex;
+        #text {
+            color:#e3dac9c0;
+            height: 8rem;
+            font-size: 1.3rem;
+            display: flex;
             justify-content: flex-start;
             align-items: center;
         }
 
-        #form{
-            color:#aeaeae;
+        #form {
             display:flex;
             justify-content: flex-start;
             align-items: center;
             height: 20vh;
 
-                #subject{
-                    width: 25vw;
-                    height: 5vh;
+                #subject {
+                    width: 20rem;
+                    height: 2rem;
                     border-radius: 10px;
                     background-color: #110008;
                     
                     
                     
 
-                        input{
+                        input {
                             margin: 0;
                             padding: 0;
-                            padding-left:0.5vw;
+                            padding-left:0.5rem;
                             border: none;
                             outline: none;
                             width:100%;
                             height: 100%;
                             background:none;
-                            font-size:1.2vw;
+                            font-size:1.2rem;
                             font-family: "Lato";
-                            color:#aeaeae;
+                            color:#e3dac9c0;
                         }
                     }
-                #send{
-                    button{
+                #send {
+                    button {
                     margin-top:3vh;
-                    width: 12.5vw;
-                    height: 5vh;
+                    width: 8rem;
+                    height: 2.5rem;
                     border-radius: 10px;
-                    font-size:2.5vh;
+                    font-size: 1.2rem;
                     font-weight: 900;
                     font-family:"Lato";
                     border:none;
                     outline:none;
-                    background-color: #f4c621;
+                    background-color: rgb(235, 181, 33);
                     color:#1e000e;
                     
                     }
