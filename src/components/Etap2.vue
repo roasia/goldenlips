@@ -62,11 +62,10 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
 
 
-  .container{
-    background-color: #36000C;
-    color: #F4C621;
+  .container {
+    background-color: #1E000E;
+    color: rgb(235, 181, 33);
     font-family: Lato;
-    height: 45rem;
     text-transform: uppercase;
     width: 100%;
     display: flex;
@@ -74,8 +73,7 @@ export default {
     align-items: center;
     font-weight: 900;
 
-
-    .title{
+    .title {
       width: 100%;
       height: 6rem;
       display: flex;
@@ -83,7 +81,7 @@ export default {
       align-items: center;
       font-size: 40px;
     }
-    .main{
+    .main {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -92,73 +90,72 @@ export default {
       height: 20em;
       margin-left: 2.5rem;
 
-      .left{
+      .left {
         width: 30%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        .single-name{
+        .single-name {
           width: 10rem;
           height: 3rem;
           text-align: left;
-          //margin-left: 18rem;
-
         }
       }
-      .right{
+      .right {
         width: 70%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-        .single-input{
+        .single-input {
           width: 20rem;
           height: 3rem;
           display: flex;
           justify-content: flex-end;
           input {
             border-radius: 10px;
-            background-color: #240008;
+            background-color: rgb(54, 10, 31);
             border: none;
             width: 20vw;
             height: 2vw;
             color: white;
-            font-size: 1.5vw;
+            font-size: 1.1rem;
             outline: none;
             padding-left: 1vw;
           }
-          select{
+          select {
             border-radius: 10px;
-            background-color: #240008;
+            background-color: rgb(54, 10, 31);
             border: none;
             width: 21vw;
             height: 2vw;
             color: white;
-            font-size: 1.5vw;
+            font-size: 1.3rem;
             outline: none;
           }
         }
       }
     }
-    .button{
+    .button {
       display: flex;
       width: 60vw;
       justify-content: flex-end;
       padding-right: 20vw;
       
-      button{
+      button {
         border-radius: 18px;
-        background-color:#F4C621;
-        border: 1px solid #F4C621;
+        background-color:rgb(235, 181, 33);
+        border: 1px solid rgb(235, 181, 33);
         font-family: Lato;
         font-weight: 900;
         text-transform: uppercase;
         height: 3rem;
         width: 10rem;
         font-size: 2.5vh;
+        outline: none;
       }
     }
   }
