@@ -1,6 +1,7 @@
 <template>
     
     <div id="container">
+    <div id="box">
         <div id="title">
             Wyślij swoją propozycję tematu
         </div>
@@ -14,10 +15,11 @@
             </div>
             <br>
             <div id="send">
-                <input type="submit" value="Wyślij">
+                <button>Wyślij</button>
             </div>
             </form>
         </div>
+    </div>
     </div>     
 </template>
 
@@ -32,65 +34,88 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
     #container{
         width: 100vw;
+        height: 100vh;
         display: flex;
-        justify-content: flex-start;
         flex-direction: column;
+        align-items: center;
         font-family: "Lato";
         text-transform:uppercase;
+        background-color: #1e000e;
 
-    #title{
-        width: 100%;
-        height: 8rem;
-        font-size: 4em;
-        color:#f4c621;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+        #box{
+            width:  50vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 
-    #text{
-        color:#aeaeae;
-        font-size:2.5em;
-    }
 
-    #form{
-        color:#aeaeae;
-        display:flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        #title{
+            height: 10vh;
+            font-size: 3em;
+            color:#f4c621;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-weight: 900;
+        }
 
-            #subject{
-                width: 50rem;
-                height: 7rem;
-                border-radius: 10px;
-                background-color: #f4c621;
+        #text{
+            color:#aeaeae;
+            height: 20vh;
+            font-size:2em;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
 
-                    input{
-                        margin: 0;
-                        padding: 0;
-                        border: none;
-                        outline: none;
-                        width:100%;
-                        height: 100%;
-                        background:none;
-                    }
-            #send{
-                width: 21rem;
-                height: 7rem;
-                border-radius: 10px;
-                background-color: #f4c621;
-                color:black;
+        #form{
+            color:#aeaeae;
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 20vh;
 
-                    input{
-                        margin: 0;
-                        padding: 0;
-                        border: none;
-                        outline: none;
-                        width:100%;
-                        height: 100%;
-                        background:none;
+                #subject{
+                    width: 25vw;
+                    height: 5vh;
+                    border-radius: 10px;
+                    background-color: #110008;
+                    
+                    
+                    
+
+                        input{
+                            margin: 0;
+                            padding: 0;
+                            padding-left:0.5vw;
+                            border: none;
+                            outline: none;
+                            width:100%;
+                            height: 100%;
+                            background:none;
+                            font-size:1.2vw;
+                            font-family: "Lato";
+                            color:#aeaeae;
                         }
+                    }
+                #send{
+                    button{
+                    margin-top:3vh;
+                    width: 12.5vw;
+                    height: 5vh;
+                    border-radius: 10px;
+                    font-size:2.5vh;
+                    font-weight: 900;
+                    font-family:"Lato";
+                    border:none;
+                    outline:none;
+                    background-color: #f4c621;
+                    color:#1e000e;
+                    
+                    }
                 }
+                
             }
         }
     }
