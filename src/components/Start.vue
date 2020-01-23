@@ -17,10 +17,10 @@
 
     <div class="info">
       <div class="box">
-        <question title="Gdzie i kiedy?" text="konkurs odbędzie się w czytelni koło biblioteki; termin konkursu zostanie podany póżniej"/>
-        <question title="Kto organizuje?" text="organizatorami konkursu są: Sylwia Błażejewska oraz Beata Walczak"/>  
+        <question title="Gdzie i kiedy?" text="Konkurs odbędzie się w czytelni koło biblioteki; termin konkursu zostanie podany póżniej"/>
+        <question title="Kto organizuje?" text="Organizatorami konkursu są: Sylwia Błażejewska oraz Beata Walczak"/>  
         <question title="Kto może wziąć udział?" text="W konkursie mogą wziać udział wszyscy uczniowie z naszej szkoły"/>  
-        <question title="Czy będą jakieś nagrody?" text="zobaczymy"/>  
+        <question title="Czy będą jakieś nagrody?" text="Zobaczymy"/>  
         <question title="Gdzie szukać więcej informacji?" text="Na tej stronie będą zamieszczane wszelkie niezbędne informacje dla zainteresowanych. Jeśli jednak wolisz bardziej werbalne środki przekazu, to panie z biblioteki mogą udzielić takich informacji"/>  
 
 
@@ -54,10 +54,11 @@ export default {
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
-    color: rgba(255,255,255,0.5);
+    color: #e3dac9c0;
+    overflow-x: hidden;
 
     .banner{
-      width: 100vw;
+      width: 100%;
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -66,7 +67,7 @@ export default {
       background-size: cover;
 
       .top{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,7 +89,7 @@ export default {
         }
       }
       .bottom{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -106,13 +107,15 @@ export default {
       }
     }
     .info{
-      background-color: #36000C;
+      background-color: #1E000E;
       min-height: 100vh;
+      width: 100vw;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
 
       .box{
-        width: 40vw;
+        width: 50vw;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
