@@ -8,24 +8,51 @@
         <div id="text">
             Zbieramy propozycje tematów na najbliższą edycję konkursu. Jeśli chcesz, możesz dodać swoją propozycję poniżej:
         </div>
-        <div id="form">
+        <div id="form" v-if="!sended">
             <form>
             <div id="subject">
-                <input type="text" placeholder="Wpisz swoją propozycję...">
+                <input type="text" v-model="topic" maxlength="30" placeholder="Wpisz swoją propozycję...">
             </div>
             <br>
             <div id="send">
-                <button>Wyślij</button>
+                <button @click="send">Wyślij</button>
             </div>
             </form>
+        </div>
+        <div class="send" v-if="sended">
+            Wysłano propozycję tematu!
         </div>
     </div>
     </div>     
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-    name:"etap_1"
+    name:"etap1",
+    data() {
+        return {
+            topic: '',
+            sended: false
+        }
+    },
+    methods: {
+        send() {
+        event.preventDefault();
+            axios({
+                method: 'post',
+                url: 'http://localhost:5000/topic/add',
+                data: {
+                    SECRET_KEY: "GOLDEN_LIPS",
+                    topic: this.topic
+                }
+            });
+            this.topic = ''
+            this.sended = true;
+        }
+    }
+
 }
 </script>
 
@@ -67,6 +94,15 @@ export default {
             align-items: center;
         }
 
+        .send {
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            color:rgb(235, 181, 33);
+            font-size: 1.5rem;
+        }
+
         #form {
             display:flex;
             justify-content: flex-start;
@@ -79,9 +115,6 @@ export default {
                     border-radius: 10px;
                     background-color: #110008;
                     
-                    
-                    
-
                         input {
                             margin: 0;
                             padding: 0;

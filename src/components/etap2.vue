@@ -38,14 +38,16 @@
       </div>
     </div>
     <div class="button">
-      <button>Zapisz się!</button>
+      <button @click="send">Zapisz się!</button>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: "Etap2",
+  name: "etap2",
   data() {
     return {
       imie: '',
@@ -53,6 +55,26 @@ export default {
       klasa: '',
       temat: '',
       email: ''
+    }
+  },
+  methods: {
+    send() {
+    event.preventDefault();
+      if(this.imie != '' && this.nazwisko != '' && this.klasa != '' && this.temat != '' && this.email != '') {
+        axios({
+          method: 'post',
+          url: 'http://localhost:5000/presentation/send',
+          data: {
+              topic: this.temat,
+              firstname: this.imie,
+              surname: this.nazwisko,
+              className: this.klasa,
+              email: this.email
+          }
+        });
+      }else {
+        alert('Uzupełnij wszyskie pola!')
+      }
     }
   }
 }
@@ -136,9 +158,10 @@ export default {
             color: white;
             font-size: 1.3rem;
             outline: none;
-              -moz-appearance:none; /* Firefox */
-              -webkit-appearance:none; /* Safari and Chrome */
-              appearance:none;
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari and Chrome */
+            appearance:none;
+            cursor: pointer;
           }
         }
       }

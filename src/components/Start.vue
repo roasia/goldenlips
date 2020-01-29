@@ -76,7 +76,7 @@ export default {
 
         .title{
           font-size: 5.5rem;
-          color: #F4C621;
+          color: rgb(235, 181, 33);
           text-transform: uppercase;
           padding-top: 5rem;
           font-weight: 900;

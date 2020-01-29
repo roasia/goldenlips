@@ -22,7 +22,7 @@ export default {
   }
   .question_title {
     text-transform: uppercase;
-    color: #F4C621;
+    color: rgb(235, 181, 33);
     font-size: 2rem;
     padding-top: 9vh;
     font-weight: 900;

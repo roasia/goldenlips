@@ -2,14 +2,16 @@
   <div id="app">
     <Start/>
     <!-- <etap1/> -->
-    <etap2/>
+    <!-- <etap2/> -->
+    <etap3/>
   </div>
 </template>
 
 <script>
 import Start from "@/components/Start.vue"
-// import etap1 from "@/components/etap_1.vue"
-import etap2 from "@/components/Etap2"
+// import etap1 from "@/components/etap1"
+// import etap2 from "@/components/etap2"
+import etap3 from "@/components/etap3"
 
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     Start,
     // etap1,
-    etap2
+    // etap2,
+    etap3
   }
 }
 </script>
