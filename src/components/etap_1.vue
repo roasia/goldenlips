@@ -40,6 +40,7 @@ export default {
         font-family: "Lato";
         text-transform:uppercase;
         background-color: #1e000e;
+        padding-bottom: 2rem;
 
         #box {
             width:  50vw;
