@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Start/>
+    <etap1/>
   </div>
 </template>
 
 <script>
 import Start from "@/components/Start.vue"
+import etap1 from "@/components/etap_1.vue"
 
 export default {
   name: 'app',
   components: {
-    Start
+    Start,
+    etap1
   }
 }
 </script>
